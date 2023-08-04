@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Pages from './pages/Pages';
+import Category from './components/Category';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import Search from './components/Search';
+import { Link } from 'react-router-dom';
+import { GiKnifeFork } from 'react-icons/gi';
+import { styled } from 'styled-components';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <Nav>
+      <GiKnifeFork/>
+      <Logo to={"/"}>Tokelicious</Logo>
+    </Nav>
+    <Search/>
+      <Category/>
+      <Pages/>
+    </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+const Logo=styled(Link)`
+text-decoration:none;
+font-size:2.0rem;
+font-weight:400;
+font-family:"Lobster Two",cursive;
+`;
+const Nav=styled.div`
+margin: 0rem 2.2rem;
+ padding:0.5rem 0rem;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+
+svg{
+  font-size:2rem;
+}
+`
+
+export default App
+
