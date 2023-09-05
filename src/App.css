@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #e8ce76;
+    /* background-color: #e68168; */
+
+  color: hsl(331, 82%, 15%);
+  font-family: "Architects Daughter";
+  margin: 0% 13%;
+}
+.popular-cards .veggie-cards{
+  height:470px;
+}
